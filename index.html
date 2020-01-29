@@ -9485,7 +9485,7 @@
         display: none;
       }
     </style>
-    <main class="container">
+    <header class="container">
       <h1 class="mb-5">Rapport PEPSY</h1>
       <div class="input-group-lg mb-3">
         <div class="custom-file">
@@ -9502,8 +9502,9 @@
           >
         </div>
       </div>
-      <section class="container img-wrapper"></section>
-    </main>
+    </header>
+
+      <section class="img-wrapper"></section>
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
       integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -9522,7 +9523,7 @@
     <script>
       function getFiles(event) {
         for (let value of Object.entries(event)) {
-          $(".img-wrapper").append(`<img src="${value[1].name}" alt="${value[1].name}"/>`);
+          $(".img-wrapper").append(`<img class="w-100" src="${value[1].name}" alt="${value[1].name}"/>`);
         }
         $( ".input-group-lg" ).addClass( "remove" );
       }
